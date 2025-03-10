@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+        function escolha1(){
+            var html = '<div class="container">';
+            html += '<p> ...</p>';
+            html += '<p>toma um café e pensa na vida, logo depois foi pra casa</p>';
+            html += '<img src="2c.gif">';
+            html += '</div>';
+            $("body").append(html);
+        }
+
+        function escolha2(){
+            var html = '<div class="container">';
+            html += '<p>Você encontra uma mulher sentada no banco</p>';
+            html += '<img src="mulher.webp">';
+            html += '<button onclick="escolha4()">Deixar pra lá</button>';
+            html += '<button onclick="escolha3()">Falar com ela</button>';
+            html += '</div>';
+            $("body").append(html);
+        }
+
+        function escolha3(){
+            var html = '<div class="container">';
+            html += '<p>Depois de muitas conversas, vocês se beijaram</p>';
+            html += '<img src="00.jpg">';
+            html += '<button onclick="escolha5()">Passar a noite juntos</button>';  <!-- Novo botão -->
+            html += '</div>';
+            $("body").append(html);
+        }
+
+        function escolha4(){
+            var html = '<div class="container">';
+            html += '<p>Você foi para casa e refletiu sobre o porquê não falou com ela</p>';
+            html += '<img src="09.gif">';
+            html += '</div>';
+            $("body").append(html);
+        }
+
+        // Nova função escolha5
+        function escolha5(){
+            var html = '<div class="container">';
+            html += '<p>Vocês decidiram passar a noite juntos, aproveitando o momento de forma íntima e divertida.</p>';
+            html += '<img src="cs2.jpg">';
+            html += '</div>';
+            $("body").append(html);
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        button {
+            width: 250px;
+            height: 50px;
+            margin: 10px;
+            background-color: #007BFF; /* Cor de fundo */
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Cor ao passar o mouse */
+            transform: translateY(-3px);
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>O Encontro!</h1>
+        <p>Você é um cara tranquilo que vive a vida de forma espontânea, mas precisa de alguém...</p>
+        <img src="1.gif" alt="Animação">
+
+        <br>
+
+        <button onclick="escolha1()">Ir tomar um café</button>
+        <button onclick="escolha2()">Ir na praça</button>
+    </div>
+
+</body>
+</html>
